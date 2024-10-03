@@ -1,0 +1,77 @@
+.App {
+  text-align: center;
+  padding-top: 64px; /* Espacio para el AppBar */
+}
+
+.app-bar {
+  background-color: #3f51b5; /* Color de la barra de la aplicación */
+}
+
+.notes-container {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 64px); /* Ajuste para el AppBar */
+  overflow: hidden; /* Evitar que las notas se desborden */
+  border: 1px solid #ccc; /* Borde opcional */
+}
+
+.note {
+  position: absolute; /* Permitir que se muevan libremente */
+  width: 200px; /* Ancho fijo para las notas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 10px;
+  margin: 10px;
+  z-index: 1; /* Asegurar que las notas se superpongan */
+  transition: all 0.3s ease; /* Transición suave para efectos */
+}
+
+.note:hover {
+  transform: scale(1.05); /* Efecto de hover para notas */
+}
+
+.stacked-note {
+  z-index: 2; /* Notas apiladas en una posición más alta */
+}
+
+.note-group {
+  background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente para el grupo */
+  border: 2px dashed #3f51b5; /* Borde de grupo */
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.fab {
+  position: fixed;
+  bottom: 16px; /* Ajusta según tu diseño */
+  right: 16px; /* Ajusta según tu diseño */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para el botón */
+}
+
+/* Estilos para la barra de búsqueda */
+.search {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 300px;
+}
+
+.input-root {
+  width: 100%;
+}
+
+.input-input {
+  padding: 10px;
+  padding-right: 40px; /* Espacio para el icono a la derecha */
+  width: 100%;
+}
+
+.search-icon {
+  position: absolute;
+  right: 10px;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

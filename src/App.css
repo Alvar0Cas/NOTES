@@ -1,0 +1,89 @@
+/* General app styles */
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden; /* Evitar desbordamiento en la ventana */
+}
+
+.app-bar {
+  z-index: 1200; /* Asegurar que esté encima del contenido */
+}
+
+.app-title {
+  flex-grow: 1; /* Para que el título ocupe todo el espacio disponible */
+}
+
+.notes-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding: 20px;
+  margin-top: 64px; /* Dejar espacio para el AppBar */
+  overflow-y: auto; /* Permitir scroll si hay muchas notas */
+  height: calc(100vh - 64px); /* Ajuste dinámico para el tamaño de la pantalla */
+}
+
+.note {
+  width: 200px;
+  margin: 10px;
+  padding: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  cursor: grab;
+}
+
+.note-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.add-note-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #3f51b5;
+  color: white;
+}
+
+.add-note-button:hover {
+  background-color: #303f9f;
+}
+
+/* Input base styling for search bar */
+.search {
+  position: relative;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.15);
+  margin-right: 16px;
+  width: 100%;
+  max-width: 300px;
+}
+
+.search-icon {
+  padding: 8px;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-root {
+  color: inherit;
+  width: 100%;
+}
+
+.input-input {
+  padding: 8px 8px 8px 40px;
+  width: 100%;
+}
+
+.section-right {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* Espacio entre los íconos */
+}
+
+.grow {
+  flex-grow: 1; /* Ocupa el espacio restante para que los íconos se vayan a la derecha */
+}
